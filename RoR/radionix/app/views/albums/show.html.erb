@@ -1,0 +1,19 @@
+<h1><%= @album.title %></h1>
+<ul>
+  <p><%= @album.author %></p>
+  <p><%= @album.year %></p>
+  <p><%= @album.quantity %></p>
+
+  <h1>Songs in this album: </h2>
+  <% @album.songs.each do |song| %>
+    <p>
+      <strong>Title:</strong>
+      <%= song.title %>
+   </p>
+
+    <p>
+      <strong>Length:</strong>
+      <%= song.length %>
+    </p>
+<% end %>
+</ul>
